@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222;
+}
+
+.card{
+    width: 90%;
+    max-width: 550px;
+    background: linear-gradient(135deg, #fe5d00, #ffd900);
+    color: #111;
+    margin: 100px auto 0;
+    border-radius: 1.1em;
+    padding: 3em 3em 5em 3em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 500px){
+    .card{
+        padding: 3em 2em 5em 1.8em;
+    }
+    *{
+        font-size: 90%;
+    }
+    .details{
+        font-size: 120%;
+    }
+    .col i{
+        font-size: 70%;
+    }
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search button {
+    font-size: 1em;
+    border: 0;
+    outline: 0;
+    background: none;
+    color: #ebfffc;
+    cursor: pointer;
+}
+
+.search i{
+    font-size: 2.5em;
+}
+
+.search input{
+    width: 75%;
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 1em;
+    height: 2.4em;
+    border-radius: 3em;
+    flex: 1;
+    margin-right: 1em;
+    font-size: 1.5em;
+}
+
+.weather-icon{
+    margin: 1.5em auto;
+    width: 7em;
+    object-fit: cover;
+}
+
+.weather-icon img{
+    width: 100%;
+}
+
+.temp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.temp .primary, #pri{
+    font-size: 5em;
+    font-weight: 550;
+}
+
+.temp .secondary{
+    font-size: 5em;
+    font-weight: 100;
+    opacity: 0.65;
+    display: flex;
+}
+
+#switch{
+    /* color: white; */
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    max-height: 5em;
+    max-width: fit-content;
+    position: relative;
+    bottom: 0.2em;
+    user-select: none;
+}
+
+.bar{
+    position: relative;
+    bottom: 0.1em;
+}
+
+.weather h2{
+    font-size: 3.5em;
+    font-weight: 500;
+    /* margin-top: -10px; *//
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1em;
+    margin-top: 2.5em;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+}
+.col p{
+    font-size: 1.5em;
+}
+
+.col i{
+    font-size: 3em;
+    margin-right: 0.1em;
+}
+
+.extra{
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+@keyframes loadingAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.city, .temp, .humidity, .wind {
+    animation: loadingAnimation 1.5s; 
+}
+
+.weather{
+    height: 0;
+    overflow: hidden;
+    transition: all;
+    transition-duration: 1s;
+}
+
+.error{
+    height: 0;
+    overflow: hidden;
+    margin-top: 2.5em;
+    color: #fff;
+    transition: all;
+    transition-duration: 1s;
+}
